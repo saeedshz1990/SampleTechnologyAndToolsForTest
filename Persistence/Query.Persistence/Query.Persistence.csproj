@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.7" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ArticleConfigs\Config\" />
+    <Folder Include="CategoryConfigs\Config\" />
+    <Folder Include="CountryConfigs\Config\" />
+    <Folder Include="CountryConfigs\Repository\" />
+    <Folder Include="OrderConfig\Config\" />
+    <Folder Include="OrderConfig\Repository\" />
+    <Folder Include="ProductConfigs\Config\" />
+    <Folder Include="ProductConfigs\Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Query.Application\Query.Application.csproj" />
+  </ItemGroup>
+
+</Project>

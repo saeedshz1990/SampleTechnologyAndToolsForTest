@@ -1,0 +1,51 @@
+﻿
+<h1> مدیریت استان</h1>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-body">
+                <table class="table table-bordered table-light table-responsive" id="table-1">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">نام</th>
+                            <th class="text-center">تاریخ ایجاد</th>
+                            <th class="text-center">وضعیت</th>
+                            <th class="text-center">عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">تست</td>
+                            <td class="text-center">1404/04/04</td>
+                            <td class="text-center">انجام شده</td>
+                            <td class="text-center">
+                                <a asp-controller="Province" asp-action="Detail" class="btn btn-primary">جزئیات</a>
+                                <a asp-controller="Province" asp-action="Update" class="btn btn-success">ویرایش</a>
+                                <a href="#" class="btn btn-danger">حذف</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

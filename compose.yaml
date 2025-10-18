@@ -1,0 +1,19 @@
+﻿services:
+  sampletechnologyfortest.blazorserver:
+    image: sampletechnologyfortest.blazorserver
+    build:
+      context: .
+      dockerfile: UI/SampleTechnologyForTest.BlazorServer/Dockerfile
+
+  sampletechnologyfortest.blazorwasm:
+    image: sampletechnologyfortest.blazorwasm
+    build:
+      context: .
+      dockerfile: UI/SampleTechnologyForTest.BlazorWASM/SampleTechnologyForTest.BlazorWASM/Dockerfile
+
+  sampletechnologyfortest.blazorwasm.client:
+    image: sampletechnologyfortest.blazorwasm.client
+    build:
+      context: .
+      dockerfile: UI/SampleTechnologyForTest.BlazorWASM/SampleTechnologyForTest.BlazorWASM.Client/Dockerfile
+

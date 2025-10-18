@@ -1,0 +1,71 @@
+﻿@* @model SampleTechnologyForTest.Command.Application.Articles.Dto.Create.CreateArticleCommand *@
+@model SampleTechnologyForTest.Entities.Entity.Articles.Article
+
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <h1 class="card-header" style="text-align :right;margin-bottom:auto">ثبت مقاله جدید</h1>
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Title" class="form-control" placeholder="نام مقاله" />
+                                    <span asp-validation-for="Title" class="helper-text red-text"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Body" class="form-control" placeholder="بدنه" />
+                                    <span asp-validation-for="Body" class="helper-text red-text"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Tag" class="form-control" placeholder="تگ ها" />
+                                    <span asp-validation-for="Tag" class="helper-text red-text"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Description" class="form-control" placeholder="توضیحات" />
+                                    <span asp-validation-for="Description" class="helper-text red-text"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="ArticleCategory" class="form-control" placeholder="دسته بندی مقالات" />
+                                    <span asp-validation-for="ArticleCategory" class="helper-text red-text"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-success btn-block">ذخیره</button>
+                            </div>
+                            <div class="col-md-2">
+                                <a asp-controller="Article" asp-action="Index" class="btn bg-blue waves-effect waves-light pull-right">بازگشت</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

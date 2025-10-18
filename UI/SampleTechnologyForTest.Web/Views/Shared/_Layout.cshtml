@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1,
+   shrink-to-fit=no" name="viewport">
+    <title>داشبورد اجیس </title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/app.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/components.css">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='~/img/favicon.ico'>
+</head>
+<body>
+    <div class="loader"></div>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <div class="form-inline me-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-bs-toggle="sidebar" class="nav-link nav-link-lg
+         collapse-btn"> <i data-feather="align-justify"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                                <i data-feather="maximize"></i>
+                            </a>
+                        </li>
+                        @*                         <li>
+                            <form class="form-inline me-auto">
+                                <div class="search-element d-flex">
+                                    <input class="form-control" type="search" placeholder="جستجو کردن" aria-label="Search">
+                                    <button class="btn" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </li> *@
+                    </ul>
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown"
+                           class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="تصویر"
+                                 src="~/img/user.png"
+                                 class="user-img-radious-style">
+                            <span class="d-sm-none d-lg-inline-block"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right pullDown">
+                            <div class="dropdown-title">سلام سارا اسمیت</div>
+                            <a href="profile.html" class="dropdown-item has-icon">
+                                <i class="far
+          fa-user"></i> مشخصات
+                            </a> <a href="timeline.html" class="dropdown-item has-icon">
+                                <i class="fas fa-bolt"></i>
+                                فعالیت ها
+                            </a> <a href="#" class="dropdown-item has-icon">
+                                <i class="fas fa-cog"></i>
+                                تنظیمات
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i>
+                                خروج
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="index.html">
+                            <img alt="تصویر" src="~/img/logo.png" class="header-logo"> <span class="logo-name">اجیس</span>
+                        </a>
+                    </div>
+                    <div class="sidebar-user">
+                        <div class="sidebar-user-picture">
+                            <img alt="تصویر" src="~/img/userbig.png">
+                        </div>
+                        <div class="sidebar-user-details">
+                            <div class="user-name">سارا اسمیت</div>
+                            <div class="user-role">مدیر</div>
+                        </div>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="dropdown active">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link"><i data-feather="monitor"></i><span>صفحه اصلی</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown"><i data-feather="briefcase"></i><span>مدیریت محصولات</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Category" asp-action="Index" class="nav-link">دسته بندی </a></li>
+                                <li><a asp-controller="Product" asp-action="Index" class="nav-link">محصولات </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown"><i data-feather="command"></i><span>مدیریت مقالات</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="ArticleCategory" asp-action="Index" class="nav-link">دسته بندی مقالات</a></li>
+                                <li><a asp-controller="Article" asp-action="Index" class="nav-link">مقالات</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown"><i data-feather="mail"></i><span>تنظیمات </span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Country" asp-action="Index" class="nav-link">کشور</a></li>
+                                <li><a asp-controller="Province" asp-action="Index" class="nav-link">استان</a></li>
+                                <li><a asp-controller="City" asp-action="Index" class="nav-link">شهر</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown"><i data-feather="mail"></i><span>مدیریت سفارشات </span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Order" asp-action="Index" class="nav-link">سفارشات</a></li>
+                                <li><a asp-controller="OrderItem" asp-action="Index" class="nav-link">جزییات سفارشات</a></li>
+                                
+                            </ul>
+                        </li>
+                       @*  <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown"><i data-feather="mail"></i><span>تنظیمات </span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Country" asp-action="Index" class="nav-link">کشور</a></li>
+                                <li><a asp-controller="Province" asp-action="Index" class="nav-link">استان</a></li>
+                                <li><a asp-controller="City" asp-action="Index" class="nav-link">شهر</a></li>
+                            </ul>
+                        </li> *@
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                @RenderBody()
+                <div class="settingSidebar">
+                    <a href="javascript:void(0)" class="settingPanelToggle">
+                        <i class="fa
+        fa-spin fa-cog"></i>
+                    </a>
+                    <div class="settingSidebar-body ps-container ps-theme-default">
+                        <div class="fade show active">
+                            <div class="setting-panel-header">تنظیم پنل</div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">رنگ قالب</h6>
+                                <div class="selectgroup layout-color w-50">
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="value" value="1" class="selectgroup-input select-layout" checked=""> <span class="selectgroup-button">سبک</span>
+                                    </label> <label class="selectgroup-item">
+                                        <input type="radio" name="value" value="2" class="selectgroup-input select-layout">
+                                        <span class="selectgroup-button">تاریک</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">رنگ نوار کناری</h6>
+                                <div class="selectgroup selectgroup-pills sidebar-color">
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar"> <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="روشن"><i class="fas fa-sun"></i></span>
+                                    </label> <label class="selectgroup-item">
+                                        <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked=""> <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="تاریک"><i class="fas fa-moon"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">تم رنگی</h6>
+                                <div class="theme-setting-options">
+                                    <ul class="choose-theme list-unstyled mb-0">
+                                        <li title="سفید" class="active">
+                                            <div class="white"></div>
+                                        </li>
+                                        <li title="فیروزه ای">
+                                            <div class="cyan"></div>
+                                        </li>
+                                        <li title="سیاه">
+                                            <div class="black"></div>
+                                        </li>
+                                        <li title="رنگ بنفش">
+                                            <div class="purple"></div>
+                                        </li>
+                                        <li title="نارنجی">
+                                            <div class="orange"></div>
+                                        </li>
+                                        <li title="سبز">
+                                            <div class="green"></div>
+                                        </li>
+                                        <li title="سرخ">
+                                            <div class="red"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <div class="theme-setting-options">
+                                    <label>
+                                        <span class="control-label p-r-20">مینی نوار کناری</span> <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="mini_sidebar_setting">
+                                        <span class="custom-switch-indicator"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <div class="theme-setting-options">
+                                    <div class="disk-server-setting m-b-20">
+                                        <p>میزان حافظه</p>
+                                        <div class="sidebar-progress">
+                                            <div class="progress" data-height="5">
+                                                <div class="progress-bar l-bg-green" role="progressbar" data-width="80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="progress-description">
+                                                <small>26٪ باقی مانده است</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="disk-server-setting">
+                                        <p>بارگذاری سرور</p>
+                                        <div class="sidebar-progress">
+                                            <div class="progress" data-height="5">
+                                                <div class="progress-bar l-bg-orange" role="progressbar" data-width="58%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="progress-description">
+                                                <small>بسیار بارگیری</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                                <a href="#" class="btn btn-icon icon-left btn-primary
+          btn-restore-theme">
+                                    <i class="fas fa-undo"></i> بازیابی پیش فرض
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="main-footer">
+                <div class="footer-left">
+                    حق چاپ © 2022 -  @DateTime.Now.Year
+                    <div class="bullet"></div>
+                    طراحی توسط <a href="#">سعید انصاری</a>
+                </div>
+                <div class="footer-right"></div>
+            </footer>
+        </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="~/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <script src="~/bundles/chartjs/chart.min.js"></script>
+    <script src="~/bundles/apexcharts/apexcharts.min.js"></script>
+    <script src="~/bundles/jquery.sparkline.min.js"></script>
+    <script src="~/bundles/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="~/bundles/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/bundles/jqvmap/dist/maps/jquery.vmap.indonesia.js"></script>
+    <!-- Page Specific JS File -->
+    <script src="~/js/page/index2.js"></script>
+    <script src="~/js/page/todo.js"></script>
+    <!-- Template JS File -->
+    <script src="~/js/scripts.js"></script>
+    <!-- Custom JS File -->
+    <script src="~/js/custom.js"></script>
+</body>
+
+</html>

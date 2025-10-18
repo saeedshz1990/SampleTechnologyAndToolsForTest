@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Command.Application\Command.Application.csproj" />
+    <ProjectReference Include="..\..\Application\Query.Application\Query.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\SampleTechnologyForTest.Infrastructure\SampleTechnologyForTest.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Persistence\Command.Persistence\Command.Persistence.csproj" />
+    <ProjectReference Include="..\..\Persistence\Query.Persistence\Query.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
