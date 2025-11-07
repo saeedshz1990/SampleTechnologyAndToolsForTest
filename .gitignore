@@ -3,4 +3,21 @@
 ################################################################################
 
 *.xml
-/.idea/.idea.SampleTechnoligyForTest/.idea/workspace.xml
+/SampleTechnoligyForTest/.idea
+/SampleTechnoligyForTest/.vs
+/SampleTechnoligyForTest/src/UI/SampleTechnoligyForTest.RestApi/obj
+/SampleTechnoligyForTest/src/UI/SampleTechnoligyForTest.RestApi/bin
+/SampleTechnoligyForTest/src/Application/Command.Application/obj
+/SampleTechnoligyForTest/src/Application/Command.Application/bin
+/SampleTechnoligyForTest/src/Application/Query.Application/obj
+/SampleTechnoligyForTest/src/Application/Query.Application/bin
+/SampleTechnoligyForTest/src/Common/SampleTechnoligyForTest.Common/obj
+/SampleTechnoligyForTest/src/Common/SampleTechnoligyForTest.Common/bin
+/SampleTechnoligyForTest/src/Domain/SampleTechnoligyForTest.Entities/obj
+/SampleTechnoligyForTest/src/Domain/SampleTechnoligyForTest.Entities/bin
+/SampleTechnoligyForTest/src/Infrastructure/SampleTechnoligyForTest.Infrastructure/obj
+/SampleTechnoligyForTest/src/Infrastructure/SampleTechnoligyForTest.Infrastructure/bin
+/SampleTechnoligyForTest/src/Persistence/Command.Persistence/obj
+/SampleTechnoligyForTest/src/Persistence/Command.Persistence/bin
+/SampleTechnoligyForTest/src/Persistence/Query.Persistence/obj
+/SampleTechnoligyForTest/src/Persistence/Query.Persistence/bin
