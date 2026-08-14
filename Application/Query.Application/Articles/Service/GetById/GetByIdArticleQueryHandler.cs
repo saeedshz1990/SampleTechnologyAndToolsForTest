@@ -9,6 +9,7 @@ namespace Query.Application.Articles.Service.GetById
     public class GetByIdArticleQueryHandler : IRequestHandler<GetArticleByIdQuery, ResultDto<ArticleQr>>
     {
         private readonly IArticleQueryRepository _articleQueryRepository;
+
         public GetByIdArticleQueryHandler(IArticleQueryRepository articleQueryRepository)
         {
             _articleQueryRepository = articleQueryRepository;

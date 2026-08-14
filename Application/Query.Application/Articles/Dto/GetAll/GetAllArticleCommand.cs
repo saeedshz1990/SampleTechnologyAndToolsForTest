@@ -6,5 +6,6 @@ namespace Query.Application.Articles.Dto.GetAll
 {
     public class GetAllArticleCommand :IRequest<ResultDto<IEnumerable<ArticleQr>>>
     {
+
     }
 }
