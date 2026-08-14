@@ -16,9 +16,8 @@
         {
             Title = title;
             ProvinceId = provinceId;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static City Create(string title, long provinceId)

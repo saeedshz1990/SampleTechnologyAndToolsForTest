@@ -1,11 +1,14 @@
-﻿namespace SampleTechnologyForTest.Entities.Entity.Orders
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SampleTechnologyForTest.Entities.Entity.Orders
 {
     public class Order : BaseEntity
     {
         public long OrderNumber { get; set; }
-        public double FinalAmount { get; set; }
+        public decimal FinalAmount { get; set; }
         public int NumberOfItems { get; set; }
-        public int DicountPercent { get; set; }
+        [Column("DicountPercent")]
+        public int DiscountPercent { get; set; }
 
         public List<OrderItem> OrderItems { get; set; } = [];
 
@@ -14,19 +17,18 @@
 
         }
 
-        private Order(long orderNumber, double finalAmount, int numberOfItem, int discountPercent)
+        private Order(long orderNumber, decimal finalAmount, int numberOfItem, int discountPercent)
         {
             OrderNumber = orderNumber;
             FinalAmount = finalAmount;
             NumberOfItems = numberOfItem;
-            DicountPercent = discountPercent;
-            UserId = Guid.NewGuid().ToString();
+            DiscountPercent = discountPercent;
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
 
-        public static Order Create(long orderNumber, double finalAmount, int numberOfItem, int discountPercent)
+        public static Order Create(long orderNumber, decimal finalAmount, int numberOfItem, int discountPercent)
         {
             return new Order(orderNumber, finalAmount, numberOfItem, discountPercent);
         }

@@ -36,8 +36,8 @@ namespace Command.Application.Products.Service.Update
                 ResultDto<long>.Failure("Product Not Found!!!");
             }
 
-            product!.UpdateDate= DateTime.Now;
-            product.IsDelete= false;
+            product!.UpdateDate= DateTime.UtcNow;
+            product.IsDeleted= false;
             product.Title=request.Title;
             product.Description=request.Description;
             product.CategoryId=request.CategoryId;

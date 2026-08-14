@@ -1,4 +1,6 @@
-namespace SampleTechnologyForTest.WinForm;
+using SampleTechnologyForTest.WinForm;
+
+namespace SampleTechnologyForTest.WinForms;
 
 static class Program
 {

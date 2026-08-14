@@ -36,8 +36,8 @@ namespace Command.Application.Countries.Service.Update
                 ResultDto<long>.Failure("Country NotFound!!!");
             }
 
-            country!.UpdateDate= DateTime.Now;
-            country.IsDelete = false;
+            country!.UpdateDate= DateTime.UtcNow;
+            country.IsDeleted = false;
             country.Title =request.Title;
             country.CountryCode = request.CountryCode;
 

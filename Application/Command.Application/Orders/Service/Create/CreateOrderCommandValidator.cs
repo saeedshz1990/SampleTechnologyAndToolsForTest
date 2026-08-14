@@ -15,8 +15,8 @@ namespace Command.Application.Orders.Service.Create
                 .NotEmpty().NotNull().WithMessage("NumberOfItems is required")
                 .Must(IsValidId).WithMessage("NumberOfItems Id Is Not Valid");
 
-            RuleFor(x => x.DicountPercent)
-                .NotEmpty().NotNull().WithMessage("DicountPercent is required");
+            RuleFor(x => x.DiscountPercent)
+                .NotEmpty().NotNull().WithMessage("DiscountPercent is required");
 
             RuleFor(x => x.FinalAmount)
                 .NotEmpty().NotNull().WithMessage("FinalAmount is required")
@@ -33,7 +33,7 @@ namespace Command.Application.Orders.Service.Create
             return id > 0;
         }
 
-        public bool IsValidId(double id)
+        public bool IsValidId(decimal id)
         {
             return id > 0;
         }

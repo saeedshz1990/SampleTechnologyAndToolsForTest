@@ -54,8 +54,8 @@ namespace Command.Application.Orders.Service.UpdateOrderItem
                 return ResultDto<long>.Failure("Product Not Found!!!");
             }
 
-            orderItem.UpdateDate = DateTime.Now;
-            orderItem.IsDelete = false;
+            orderItem.UpdateDate = DateTime.UtcNow;
+            orderItem.IsDeleted = false;
             orderItem.CountOfItem=request.CountOfItem;
             orderItem.DiscountOfAmount = request.DiscountOfAmount;
 

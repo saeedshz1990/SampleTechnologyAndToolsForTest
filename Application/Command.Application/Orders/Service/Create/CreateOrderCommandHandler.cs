@@ -30,7 +30,7 @@ namespace Command.Application.Orders.Service.Create
             };
 
             var order = Order.Create(request.OrderNumber, request.FinalAmount,
-                                     request.NumberOfItems, request.DicountPercent);
+                                     request.NumberOfItems, request.DiscountPercent);
 
             _commandRepository.Create(order, cancellationToken);
 

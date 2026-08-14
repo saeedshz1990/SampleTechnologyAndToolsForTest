@@ -46,8 +46,8 @@ namespace Command.Application.Countries.Service.UpdateProvince
                 ResultDto<long>.Failure("Province NotFound!!!");
             }
 
-            province!.UpdateDate = DateTime.Now;
-            province.IsDelete = false;
+            province!.UpdateDate = DateTime.UtcNow;
+            province.IsDeleted = false;
             province.Title = request.Title;
             province.CountryId = request.CountryId;
 

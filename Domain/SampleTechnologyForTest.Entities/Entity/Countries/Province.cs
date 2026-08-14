@@ -17,9 +17,8 @@
         {
             Title = title;
             CountryId = countryId;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static Province Create(string title, long countryId)

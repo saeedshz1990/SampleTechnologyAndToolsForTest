@@ -23,9 +23,8 @@ namespace SampleTechnologyForTest.Entities.Entity.Products
             Title = title;
             Description = description;
             CategoryId = categoryId;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static Product Create(string title, string description, long categoryId)

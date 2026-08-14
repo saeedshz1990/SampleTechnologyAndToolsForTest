@@ -36,8 +36,8 @@ namespace Command.Application.Categories.Services.Update
 
             category.Description = request.Description;
             category.Title = request.Title;
-            category.UpdateDate = DateTime.Now;
-            category.IsDelete = false;
+            category.UpdateDate = DateTime.UtcNow;
+            category.IsDeleted = false;
 
             _categoryCommandRepository.Update(category);
             

@@ -34,11 +34,11 @@ namespace Command.Application.Orders.Service.Update
                 return ResultDto<long>.Failure("Order Not Found!!!");
             }
 
-            order.IsDelete = false;
-            order.UpdateDate = DateTime.Now;
+            order.IsDeleted = false;
+            order.UpdateDate = DateTime.UtcNow;
             order.FinalAmount = request.FinalAmount;
             order.NumberOfItems = request.NumberOfItems;
-            order.DicountPercent = request.DicountPercent;
+            order.DiscountPercent = request.DiscountPercent;
 
             _commandRepository.Update(order);
 

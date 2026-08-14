@@ -14,7 +14,7 @@ namespace Command.Persistence.OrderConfigs.Config
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.FinalAmount).IsRequired(true);
-            builder.Property(x => x.DicountPercent).IsRequired(true);
+            builder.Property(x => x.DiscountPercent).IsRequired(true);
             builder.Property(x => x.NumberOfItems).IsRequired(true);
             builder.Property(x => x.OrderNumber).IsRequired(true);
 

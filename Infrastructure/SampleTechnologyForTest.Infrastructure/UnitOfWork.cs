@@ -31,7 +31,6 @@ namespace SampleTechnologyForTest.Infrastructure
 
             try
             {
-                await _context.SaveChangesAsync(cancellationToken);
                 await _currentTransaction.CommitAsync(cancellationToken);
             }
             finally
@@ -59,9 +58,20 @@ namespace SampleTechnologyForTest.Infrastructure
         public async Task<int> SaveChangesAndCommitAsync(CancellationToken cancellationToken = default)
         {
             await BeginTransactionAsync(cancellationToken);
-            var result = await SaveChangesAsync(cancellationToken);
-            await CommitTransactionAsync(cancellationToken);
-            return result;
+
+            try
+            {
+                var result = await SaveChangesAsync(cancellationToken);
+
+                await CommitTransactionAsync(cancellationToken);
+
+                return result;
+            }
+            catch
+            {
+                await RollbackTransactionAsync();
+                throw;
+            }
         }
     }
 }

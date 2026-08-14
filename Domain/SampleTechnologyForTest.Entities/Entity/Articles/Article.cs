@@ -22,9 +22,8 @@
             Tag = tag;
             Description = description;
             ArticleCategoryId = articleCategory;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static Article Create(string title, string body, string tag, string description, long articleCategory)

@@ -14,9 +14,8 @@ namespace SampleTechnologyForTest.Entities.Entity.Categories
         {
             Title = title;
             Description = description;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static Category Create(string title, string description)

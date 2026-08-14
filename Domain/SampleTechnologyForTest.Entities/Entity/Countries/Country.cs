@@ -17,9 +17,8 @@
         {
             Title = title;
             CountryCode = countryCode;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
 

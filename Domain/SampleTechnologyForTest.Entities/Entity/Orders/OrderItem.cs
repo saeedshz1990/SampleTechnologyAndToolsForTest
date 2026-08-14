@@ -25,9 +25,8 @@ namespace SampleTechnologyForTest.Entities.Entity.Orders
             DiscountOfAmount = discountnOfAmount;
             ProductId = productId;
             OrderId = orderId;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static OrderItem Create(int countOfItem, int discountnOfAmount, long productId, long orderId)

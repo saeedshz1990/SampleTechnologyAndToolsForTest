@@ -16,9 +16,8 @@
         {
             Title = title;
             Description = description;
-            UserId = Guid.NewGuid().ToString();
             InsertDate = DateTime.Now;
-            IsDelete = false;
+            IsDeleted = false;
         }
 
         public static ArticleCategory Create(string title, string description)

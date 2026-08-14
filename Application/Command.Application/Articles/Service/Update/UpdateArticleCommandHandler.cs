@@ -25,12 +25,12 @@ namespace Command.Application.Articles.Service.Update
                 return ResultDto<long>.Failure("Article Not Found");
             }
 
-            article.UpdateDate = DateTime.Now;
+            article.UpdateDate = DateTime.UtcNow;
             article.Title = request.Title;
             article.Description = request.Description;
             article.Body = request.Body;
             article.Tag = request.Tag;
-            article.IsDelete = false;
+            article.IsDeleted = false;
 
             _articleCommandRepository.Update(article);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
