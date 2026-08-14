@@ -1,7 +1,7 @@
 ﻿using Command.Application.Countries.Dto.UpdateProvince;
 using Command.Application.Countries.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Countries;
 
 namespace Command.Application.Countries.Service.UpdateProvince

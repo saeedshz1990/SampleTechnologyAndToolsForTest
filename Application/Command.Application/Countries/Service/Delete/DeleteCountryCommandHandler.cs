@@ -1,7 +1,7 @@
 ﻿using Command.Application.Countries.Dto.Delete;
 using Command.Application.Countries.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Countries.Service.Delete
 {

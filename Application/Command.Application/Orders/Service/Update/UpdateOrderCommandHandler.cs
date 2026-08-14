@@ -1,7 +1,7 @@
 ﻿using Command.Application.Orders.Dto.Update;
 using Command.Application.Orders.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Orders.Service.Update
 {

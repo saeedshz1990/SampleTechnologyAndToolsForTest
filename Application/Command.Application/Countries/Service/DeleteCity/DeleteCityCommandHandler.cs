@@ -2,7 +2,7 @@
 using Command.Application.Countries.Dto.DeleteCity;
 using Command.Application.Countries.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Countries;
 
 namespace Command.Application.Countries.Service.DeleteCity

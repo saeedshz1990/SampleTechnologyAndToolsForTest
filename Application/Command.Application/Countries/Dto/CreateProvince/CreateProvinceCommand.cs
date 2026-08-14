@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Countries.Dto.CreateProvince
 {

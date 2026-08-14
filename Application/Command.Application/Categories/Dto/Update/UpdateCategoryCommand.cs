@@ -1,6 +1,6 @@
 ﻿using Command.Application.Categories.Dto.Create;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Categories.Dto.Update
 {

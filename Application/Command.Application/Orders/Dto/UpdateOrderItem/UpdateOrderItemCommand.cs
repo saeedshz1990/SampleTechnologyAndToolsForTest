@@ -1,6 +1,6 @@
 ﻿using Command.Application.Orders.Dto.CreateOrderItem;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Orders.Dto.UpdateOrderItem
 {

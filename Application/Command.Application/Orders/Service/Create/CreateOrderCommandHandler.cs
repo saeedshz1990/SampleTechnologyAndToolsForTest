@@ -1,7 +1,7 @@
 ﻿using Command.Application.Orders.Dto.Create;
 using Command.Application.Orders.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Orders;
 
 namespace Command.Application.Orders.Service.Create

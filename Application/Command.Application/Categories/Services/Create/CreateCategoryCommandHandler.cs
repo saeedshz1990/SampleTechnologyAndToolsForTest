@@ -1,7 +1,7 @@
 ﻿using Command.Application.Categories.Dto.Create;
 using Command.Application.Categories.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Categories;
 
 namespace Command.Application.Categories.Services.Create

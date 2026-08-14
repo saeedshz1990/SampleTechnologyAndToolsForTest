@@ -1,6 +1,6 @@
 ﻿using Command.Application.Products.Dto.Create;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Products.Dto.Update
 {

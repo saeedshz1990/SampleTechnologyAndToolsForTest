@@ -23,7 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Common\SampleForTest.Common\SampleForTest.Common.csproj" />
+	  <ProjectReference Include="..\..\Common\SampleTechnologyForTest.Common\SampleTechnologyForTest.Common.csproj" />
 	  <ProjectReference Include="..\..\Domain\SampleTechnologyForTest.Entities\SampleTechnologyForTest.Entities.csproj" />
 	</ItemGroup>
 </Project>

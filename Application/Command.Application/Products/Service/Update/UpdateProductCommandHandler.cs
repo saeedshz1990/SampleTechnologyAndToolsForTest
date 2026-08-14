@@ -2,7 +2,7 @@
 using Command.Application.Products.Dto.Update;
 using Command.Application.Products.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Products;
 
 namespace Command.Application.Products.Service.Update

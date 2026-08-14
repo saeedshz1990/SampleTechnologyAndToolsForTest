@@ -2,7 +2,7 @@
 using Command.Application.Orders.Repository;
 using Command.Application.Products.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 using SampleTechnologyForTest.Entities.Entity.Orders;
 
 namespace Command.Application.Orders.Service.CreateOrderItem

@@ -2,7 +2,8 @@
 using Query.Application.Articles.Dto.GetAll;
 using Query.Application.Articles.QueryResult;
 using Query.Application.Articles.Repository;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
+
 
 namespace Query.Application.Articles.Service.GetAll
 {

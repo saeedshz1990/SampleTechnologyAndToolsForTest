@@ -2,7 +2,7 @@
 using Command.Application.Orders.Dto.Delete;
 using Command.Application.Orders.Repository;
 using MediatR;
-using SampleForTest.Common;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Orders.Service.Delete
 {

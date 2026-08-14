@@ -1,6 +1,5 @@
 ﻿using MediatR;
-using SampleForTest.Common;
-using System.Runtime.CompilerServices;
+using SampleTechnologyForTest.Common;
 
 namespace Command.Application.Articles.Dto.Create
 {
