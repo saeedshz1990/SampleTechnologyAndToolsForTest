@@ -1,4 +1,0 @@
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\obj\Debug\net9.0\staticwebassets.build.json
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\obj\Debug\net9.0\staticwebassets.build.json
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\obj\Debug\net9.0\staticwebassets.build.json
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\obj\Debug\net9.0\staticwebassets.build.json

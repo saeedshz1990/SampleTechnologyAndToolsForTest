@@ -1,4 +1,0 @@
-wwwroot\appsettings.Development.json
-wwwroot\appsettings.json
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\wwwroot\appsettings.Development.json
-C:\Users\Preacher\source\repos\SampleTechnoligyForTest\UI\SampleTechnologyForTest.BlazorWASM\SampleTechnologyForTest.BlazorWASM.Client\wwwroot\appsettings.json
