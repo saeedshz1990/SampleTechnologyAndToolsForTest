@@ -21,7 +21,6 @@
     <Folder Include="OrderConfig\Config\" />
     <Folder Include="OrderConfig\Repository\" />
     <Folder Include="ProductConfigs\Config\" />
-    <Folder Include="ProductConfigs\Repository\" />
   </ItemGroup>
 
   <ItemGroup>

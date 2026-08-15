@@ -1,5 +1,6 @@
 ﻿using Command.Application;
 using SampleTechnologyForTest.Infrastructure;
+using Query.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 
 builder.Services.AddCommandApplication();
 builder.Services.AddInfrastructureServices(builder.Configuration);
-
+builder.Services.AddQueryApplication();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -26,3 +27,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program;

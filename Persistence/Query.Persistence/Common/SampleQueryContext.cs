@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Query.Application.Articles.QueryResult;
+using Query.Application.Products.QueryResult;
 
 namespace Query.Persistence.Common
 {
@@ -9,5 +10,7 @@ namespace Query.Persistence.Common
         {
         }
         public DbSet<ArticleQr> Articles { get; set; }
+        public DbSet<ProductQr> Products { get; set; }
+
     }
 }

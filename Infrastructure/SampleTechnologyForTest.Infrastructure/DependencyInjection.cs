@@ -15,7 +15,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using Query.Application.Products.Repository;
 using Query.Persistence.Common;
+using Query.Persistence.ProductConfigs.Repository;
+using SampleTechnologyForTest.Infrastructure.BackgroundServices;
 using SampleTechnologyForTest.Logging;
 using SampleTechnologyForTest.Logging.MongoLogging;
 
@@ -74,7 +77,8 @@ namespace SampleTechnologyForTest.Infrastructure
             services.AddScoped<IProvinceCommandRepository, ProvinceCommandRepository>();
             services.AddScoped<ICityCommandRepository, CityCommandRepository>();
             services.AddScoped<IProductCommandRepository, ProductCommandRepository>();
-
+            services.AddScoped<IProductQueryRepository, ProductQueryRepository>();
+            services.AddHostedService<OutboxProcessorService>();
             return services;
         }
     }

@@ -2,7 +2,10 @@
 using Command.Application.Products.Repository;
 using MediatR;
 using SampleTechnologyForTest.Common;
+using SampleTechnologyForTest.Entities.Entity.Outbox;
 using SampleTechnologyForTest.Entities.Entity.Products;
+using SampleTechnologyForTest.Entities.Events.Products;
+using System.Text.Json;
 
 namespace Command.Application.Products.Service.Create
 {
@@ -31,9 +34,22 @@ namespace Command.Application.Products.Service.Create
 
             var product = Product.Create(request.Title, request.Description, request.CategoryId);
 
+            var productCreatedEvent = new ProductCreatedEvent(
+                                            product.Id,
+                                            product.Title,
+                                            product.Description,
+                                            product.CategoryId);
+
+            var outboxMessage = new OutboxMessage
+            {
+                Type = nameof(ProductCreatedEvent),
+                Payload = JsonSerializer.Serialize(productCreatedEvent)
+            };
+
             await _productCommandRepository.Create(product, cancellationToken);
 
             await _unitOfWork.SaveChangesAndCommitAsync(cancellationToken);
+            await _unitOfWork.AddOutboxMessageAsync(outboxMessage,cancellationToken);
 
             return ResultDto<long>.Success(product.Id, "Operation Successfully!!!");
         }

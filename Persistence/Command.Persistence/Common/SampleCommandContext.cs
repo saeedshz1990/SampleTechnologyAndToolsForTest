@@ -3,6 +3,7 @@ using SampleTechnologyForTest.Entities.Entity.Articles;
 using SampleTechnologyForTest.Entities.Entity.Categories;
 using SampleTechnologyForTest.Entities.Entity.Countries;
 using SampleTechnologyForTest.Entities.Entity.Orders;
+using SampleTechnologyForTest.Entities.Entity.Outbox;
 using SampleTechnologyForTest.Entities.Entity.Products;
 
 namespace Command.Persistence.Common
@@ -22,6 +23,6 @@ namespace Command.Persistence.Common
         public DbSet<Country> Countries { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<City> Cities { get; set; }
-
+        public DbSet<OutboxMessage> OutboxMessages { get; set; }
     }
 }

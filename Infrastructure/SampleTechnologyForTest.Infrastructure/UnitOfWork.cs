@@ -1,6 +1,7 @@
 ﻿using Command.Application;
 using Command.Persistence.Common;
 using Microsoft.EntityFrameworkCore.Storage;
+using SampleTechnologyForTest.Entities.Entity.Outbox;
 
 namespace SampleTechnologyForTest.Infrastructure
 {
@@ -72,6 +73,11 @@ namespace SampleTechnologyForTest.Infrastructure
                 await RollbackTransactionAsync();
                 throw;
             }
+        }
+
+        public async Task AddOutboxMessageAsync(OutboxMessage message,CancellationToken cancellationToken = default)
+        {
+            await _context.OutboxMessages.AddAsync(message,cancellationToken);
         }
     }
 }

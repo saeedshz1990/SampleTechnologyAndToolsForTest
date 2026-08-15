@@ -1,4 +1,6 @@
-﻿namespace Command.Application
+﻿using SampleTechnologyForTest.Entities.Entity.Outbox;
+
+namespace Command.Application
 {
     public interface IUnitOfWork
     {
@@ -10,5 +12,7 @@
         bool HasActiveTransaction { get; }
 
         Task<int> SaveChangesAndCommitAsync(CancellationToken cancellationToken = default);
+
+        Task AddOutboxMessageAsync(OutboxMessage message,CancellationToken cancellationToken = default);
     }
 }
